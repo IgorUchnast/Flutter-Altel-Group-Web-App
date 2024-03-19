@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class AltelContainer extends StatefulWidget {
-  const AltelContainer({super.key});
+class BoxContainer extends StatefulWidget {
+  const BoxContainer({
+    super.key,
+    // required this.icon,
+    required this.text,
+    required this.text1,
+  });
+
+  // final IconData icon;
+  final String text;
+  final String text1;
 
   @override
-  State<AltelContainer> createState() => _AltelContainerState();
+  State<BoxContainer> createState() => _BoxContainerState();
 }
 
-class _AltelContainerState extends State<AltelContainer> {
+class _BoxContainerState extends State<BoxContainer> {
   bool isSelected = false;
   @override
   Widget build(BuildContext context) {
@@ -28,11 +37,10 @@ class _AltelContainerState extends State<AltelContainer> {
         duration: const Duration(milliseconds: 100),
         child: Container(
           alignment: Alignment.center,
+          margin: const EdgeInsets.all(20),
           padding: const EdgeInsets.all(10),
-          width: 400,
-          // width: isSelected ? 410 : 400,
-          height: 90,
-          // height: isSelected ? 100 : 90,
+          width: 300,
+          height: 300,
           decoration: BoxDecoration(
             color: Colors.white,
             border: Border.all(
@@ -43,7 +51,7 @@ class _AltelContainerState extends State<AltelContainer> {
             boxShadow: [
               BoxShadow(
                 color: isSelected
-                    ? Colors.blue.withOpacity(0.2)
+                    ? Colors.blue.withOpacity(0.4)
                     : Colors.white.withOpacity(0.2),
                 spreadRadius: 5,
                 blurRadius: 7, // How much the shadow is blurred
@@ -51,20 +59,29 @@ class _AltelContainerState extends State<AltelContainer> {
               ),
             ],
           ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                "images/logo2.png",
-                scale: 2,
+                widget.text1,
+                color: isSelected ? Colors.blue.withOpacity(0.8) : Colors.black,
+                scale: 0.7,
+              ),
+              // Icon(
+              //   widget.icon,
+              //   size: 100,
+              //   color: Colors.blue,
+              // ),
+              const SizedBox(
+                height: 20,
               ),
               Text(
-                "Altel Group sp. z.o.o",
+                widget.text,
                 style: GoogleFonts.asar(
-                  color: Colors.black,
-                  // color: isSelected ? Colors.blue : Colors.black,
-                  fontSize: 30,
-                  fontWeight: FontWeight.w900,
+                  color:
+                      isSelected ? Colors.blue.withOpacity(0.8) : Colors.black,
+                  fontSize: 25,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
             ],
