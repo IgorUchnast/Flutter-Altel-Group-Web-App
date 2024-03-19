@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       // ),
       home: LayoutBuilder(
         builder: (context, constraints) {
-          if (constraints.maxWidth > 800) {
+          if (constraints.maxWidth > 1200) {
             return const HomePageWeb();
           } else {
             return const HomePageMobile();
