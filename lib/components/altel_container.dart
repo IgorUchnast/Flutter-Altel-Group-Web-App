@@ -54,12 +54,31 @@ class _AltelContainerState extends State<AltelContainer> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Image.asset(
-                "images/logo2.png",
-                scale: 2,
+              // Image.asset(
+              //   "images/logo2.png",
+              //   scale: 2,
+              // ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Image.asset(
+                    "images/elevator.png",
+                    scale: 1.7,
+                    color: Colors.black,
+                    // colorBlendMode: BlendMode.color,
+                  ),
+                  Text(
+                    "Altel Group",
+                    style: GoogleFonts.asar(
+                      color: Colors.black,
+                      fontSize: 15,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+                ],
               ),
               Text(
-                "Altel Group sp. z.o.o",
+                "Altel Group sp. z o.o.",
                 style: GoogleFonts.asar(
                   color: Colors.black,
                   // color: isSelected ? Colors.blue : Colors.black,

@@ -37,7 +37,11 @@ class _BoxContainerState extends State<BoxContainer> {
         duration: const Duration(milliseconds: 100),
         child: Container(
           alignment: Alignment.center,
-          margin: const EdgeInsets.all(20),
+          margin: const EdgeInsets.only(
+            bottom: 40,
+            left: 20,
+            right: 20,
+          ),
           padding: const EdgeInsets.all(10),
           width: 300,
           height: 300,
@@ -67,11 +71,6 @@ class _BoxContainerState extends State<BoxContainer> {
                 color: isSelected ? Colors.blue.withOpacity(0.8) : Colors.black,
                 scale: 0.7,
               ),
-              // Icon(
-              //   widget.icon,
-              //   size: 100,
-              //   color: Colors.blue,
-              // ),
               const SizedBox(
                 height: 20,
               ),

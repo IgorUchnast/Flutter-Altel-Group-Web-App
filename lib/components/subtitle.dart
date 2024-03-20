@@ -12,15 +12,22 @@ class Subtitle extends StatelessWidget {
     Size screenSize = MediaQuery.of(context).size;
     return Column(
       children: [
-        Text(
-          subtitle,
-          style: GoogleFonts.asar(
-              color: Colors.blue, fontSize: 30, fontWeight: FontWeight.w900),
+        Padding(
+          padding: const EdgeInsets.only(top: 50),
+          child: Text(
+            subtitle,
+            style: GoogleFonts.asar(
+              color: Colors.black,
+              fontSize: 30,
+              fontWeight: FontWeight.w900,
+            ),
+          ),
         ),
         Divider(
-          color: const Color.fromARGB(255, 205, 205, 205),
+          color: const Color.fromARGB(255, 182, 182, 182),
           endIndent: screenSize.width * 0.48,
           indent: screenSize.width * 0.48,
+          thickness: 2,
         ),
         SizedBox(
           height: screenSize.height * 0.06,

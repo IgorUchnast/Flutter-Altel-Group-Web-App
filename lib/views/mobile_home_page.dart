@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class StartingPageMobile extends StatefulWidget {
-  const StartingPageMobile({super.key});
+class MobileHomePage extends StatefulWidget {
+  const MobileHomePage({super.key});
 
   @override
-  State<StartingPageMobile> createState() => _StartingPageMobileState();
+  State<MobileHomePage> createState() => _MobileHomePageState();
 }
 
-class _StartingPageMobileState extends State<StartingPageMobile> {
+class _MobileHomePageState extends State<MobileHomePage> {
   @override
   Widget build(BuildContext context) {
     return Container();
