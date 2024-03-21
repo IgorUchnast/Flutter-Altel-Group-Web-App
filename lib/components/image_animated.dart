@@ -18,8 +18,8 @@ class _ImageAnimatedContainerState extends State<ImageAnimatedContainer>
   int _currentIndex = 0;
   final List<String> images = [
     "images/elevatorbackground.jpg",
-    "images/im2.png",
-    "images/im3.jpg",
+    "images/im5.png",
+    "images/1000s.jpg",
     "images/Services.jpeg",
     "images/slider.jpg",
     "images/im4.jpeg",
@@ -28,9 +28,9 @@ class _ImageAnimatedContainerState extends State<ImageAnimatedContainer>
     " Kompleksowa obsługa i bezpieczny \n serwis wind od 1999 roku ",
     " Innowacyjne rozwiązania \n dla przemysłu ",
     " Bezpieczne i sprawdzone \n serwisy wind dla naszych klientów ",
-    " Bezpieczne i sprawdzone \n serwisy wind dla naszych klientów ",
-    " Bezpieczne i sprawdzone \n serwisy wind dla naszych klientów ",
-    " Bezpieczne i sprawdzone \n serwisy wind dla naszych klientów ",
+    " Zapewniamy bezpieczeństwo na każdym piętrze \n dzięki naszemu doświadczeniu w serwisie \n wind od ponad dwóch dekad ",
+    " Nasze usługi\n cieszą się uznaniem klientów, \n którzy doceniają nasze zaangażowanie i niezawodność ",
+    " Tworzymy niestandardowe projekty wind, \n łącząc innowacyjność z indywidualnymi potrzebami klientów. ",
   ];
 
   late final AnimationController _controller;
@@ -66,7 +66,7 @@ class _ImageAnimatedContainerState extends State<ImageAnimatedContainer>
     Size screenSize = MediaQuery.of(context).size;
     return SizedBox(
       width: screenSize.width,
-      height: 400, // Fixed height to prevent infinite size errors
+      height: 350,
       child: AnimatedSwitcher(
         duration: const Duration(seconds: 1),
         child: Stack(
