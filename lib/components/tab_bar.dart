@@ -37,6 +37,7 @@ class _TopNaviagtionBarState extends State<TopNaviagtionBar> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const IconBarItem(
+                routeName: "/",
                 iconBarItem: Icon(Icons.home),
               ),
               const SizedBox(
@@ -48,11 +49,11 @@ class _TopNaviagtionBarState extends State<TopNaviagtionBar> {
               ),
               TopNavigationBarItem(
                 title: widget.barItem[1],
-                routeName: "/oferta",
+                routeName: "/dźwigi",
               ),
               TopNavigationBarItem(
                 title: widget.barItem[2],
-                routeName: "/usługi",
+                routeName: "/oferta",
               ),
               TopNavigationBarItem(
                 title: widget.barItem[3],

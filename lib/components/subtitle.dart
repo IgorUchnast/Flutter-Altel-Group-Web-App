@@ -29,8 +29,8 @@ class Subtitle extends StatelessWidget {
           indent: screenSize.width * 0.48,
           thickness: 2,
         ),
-        SizedBox(
-          height: screenSize.height * 0.06,
+        const SizedBox(
+          height: 30,
         ),
       ],
     );

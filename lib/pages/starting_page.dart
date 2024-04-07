@@ -2,11 +2,16 @@ import 'package:flutter/material.dart';
 // import 'package:flutter_web_app/components/container_box.dart';
 // import 'package:flutter_web_app/components/subtitle.dart';
 import 'package:flutter_web_app/components/tab_bar.dart';
-import 'package:flutter_web_app/pages/home_page.dart';
 // import 'package:google_fonts/google_fonts.dart';
 
 class StartingPageWeb extends StatefulWidget {
-  const StartingPageWeb({super.key});
+  const StartingPageWeb({
+    super.key,
+    required this.page,
+  });
+
+  final Widget page;
+
   @override
   State<StartingPageWeb> createState() => _StartingPageWebState();
 }
@@ -36,8 +41,8 @@ class _StartingPageWebState extends State<StartingPageWeb> {
           child: const TopNaviagtionBar(
             barItem: [
               "O Firmie",
+              "Dźwigi",
               "Oferta",
-              "Usługi",
               "Bezpieczeństwo",
               "Kariera",
               "Kontakt",
@@ -47,9 +52,9 @@ class _StartingPageWebState extends State<StartingPageWeb> {
         ),
       ),
       // endDrawer: const Drawer(),
-      body: const Center(
+      body: Center(
         child: SingleChildScrollView(
-          child: HomePage(),
+          child: widget.page,
         ),
       ),
     );

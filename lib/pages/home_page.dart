@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_app/components/contact_container.dart';
 import 'package:flutter_web_app/components/container_box.dart';
 import 'package:flutter_web_app/components/image_animated.dart';
 import 'package:flutter_web_app/components/subtitle.dart';
@@ -50,6 +51,7 @@ class _HomePageState extends State<HomePage> {
           height: screenSize.height * 0.4,
           color: Colors.white,
         ),
+        const ContactContainer()
       ],
     );
   }

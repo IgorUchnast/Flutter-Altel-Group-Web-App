@@ -6,9 +6,11 @@ class TopNavigationBarItem extends StatefulWidget {
     super.key,
     required this.title,
     required this.routeName,
+    // required this.chosenPage,
   });
   final String title;
   final String routeName;
+  // final Color chosenPage;
   @override
   State<TopNavigationBarItem> createState() => _TopNavigationBarItemState();
 }

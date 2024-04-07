@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_app/pages/home_page.dart';
 import 'package:flutter_web_app/pages/starting_page.dart';
 import 'package:flutter_web_app/views/mobile_home_page.dart';
 import "package:flutter_web_app/constants/routs.dart";
@@ -30,7 +31,9 @@ class MyApp extends StatelessWidget {
       home: LayoutBuilder(
         builder: (context, constraints) {
           if (constraints.maxWidth > 1200) {
-            return const StartingPageWeb();
+            return const StartingPageWeb(
+              page: HomePage(),
+            );
           } else {
             return const MobileHomePage();
           }
