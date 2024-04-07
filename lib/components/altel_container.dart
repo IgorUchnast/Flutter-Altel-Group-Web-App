@@ -29,7 +29,7 @@ class _AltelContainerState extends State<AltelContainer> {
         child: Container(
           alignment: Alignment.center,
           padding: const EdgeInsets.all(10),
-          width: 400,
+          width: 500,
           // width: isSelected ? 410 : 400,
           height: 90,
           // height: isSelected ? 100 : 90,
@@ -40,19 +40,19 @@ class _AltelContainerState extends State<AltelContainer> {
               // color: isSelected ? Colors.blue : Colors.black,
               width: 2,
             ),
-            boxShadow: [
-              BoxShadow(
-                color: isSelected
-                    ? Colors.blue.withOpacity(0.2)
-                    : Colors.white.withOpacity(0.2),
-                spreadRadius: 5,
-                blurRadius: 7, // How much the shadow is blurred
-                offset: const Offset(0, 3), // Changes position of shadow
-              ),
-            ],
+            // boxShadow: [
+            //   BoxShadow(
+            //     color: isSelected
+            //         ? Colors.blue.withOpacity(0.2)
+            //         : Colors.white.withOpacity(0.2),
+            //     spreadRadius: 5,
+            //     blurRadius: 7, // How much the shadow is blurred
+            //     offset: const Offset(0, 3), // Changes position of shadow
+            //   ),
+            // ],
           ),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               // Image.asset(
               //   "images/logo2.png",
@@ -69,18 +69,24 @@ class _AltelContainerState extends State<AltelContainer> {
                   ),
                   Text(
                     "Altel Group",
-                    style: GoogleFonts.asar(
+                    style: GoogleFonts.cinzel(
                       color: Colors.black,
                       fontSize: 15,
-                      fontWeight: FontWeight.w900,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                 ],
               ),
               Text(
                 "Altel Group sp. z o.o.",
-                style: GoogleFonts.asar(
+                style: GoogleFonts.cinzel(
                   color: Colors.black,
+                  // shadows: [
+                  //   const Shadow(
+                  //     color: Colors.blue,
+                  //     offset: Offset(1.0, 1.0),
+                  //   ),
+                  // ],
                   // color: isSelected ? Colors.blue : Colors.black,
                   fontSize: 30,
                   fontWeight: FontWeight.w900,

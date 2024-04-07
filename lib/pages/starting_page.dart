@@ -18,6 +18,7 @@ class _StartingPageWebState extends State<StartingPageWeb> {
     return Scaffold(
       backgroundColor: Colors.transparent,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         toolbarHeight: 100,
         shadowColor: Colors.black.withOpacity(0.7),
         // toolbarHeight: screenSize.height * 0.1,
@@ -38,6 +39,7 @@ class _StartingPageWebState extends State<StartingPageWeb> {
               "Oferta",
               "Usługi",
               "Bezpieczeństwo",
+              "Kariera",
               "Kontakt",
             ],
             barIcon: Icon(Icons.home),

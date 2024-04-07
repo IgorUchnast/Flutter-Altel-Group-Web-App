@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_app/components/altel_container.dart';
 import 'package:flutter_web_app/components/icon_bar_item.dart';
-import 'package:flutter_web_app/components/item_bar_item.dart';
+import 'package:flutter_web_app/components/bar_item.dart';
 
 class TopNaviagtionBar extends StatefulWidget {
   const TopNaviagtionBar({
@@ -39,20 +39,32 @@ class _TopNaviagtionBarState extends State<TopNaviagtionBar> {
               const IconBarItem(
                 iconBarItem: Icon(Icons.home),
               ),
+              const SizedBox(
+                width: 5,
+              ),
               TopNavigationBarItem(
                 title: widget.barItem[0],
+                routeName: "/o-firmie",
               ),
               TopNavigationBarItem(
                 title: widget.barItem[1],
+                routeName: "/oferta",
               ),
               TopNavigationBarItem(
                 title: widget.barItem[2],
+                routeName: "/usługi",
               ),
               TopNavigationBarItem(
                 title: widget.barItem[3],
+                routeName: "/bezpieczeństwo",
               ),
               TopNavigationBarItem(
                 title: widget.barItem[4],
+                routeName: "/kariera",
+              ),
+              TopNavigationBarItem(
+                title: widget.barItem[5],
+                routeName: "/kontakt",
               ),
             ],
           ),

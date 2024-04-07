@@ -76,7 +76,7 @@ class _BoxContainerState extends State<BoxContainer> {
               ),
               Text(
                 widget.text,
-                style: GoogleFonts.asar(
+                style: GoogleFonts.cinzel(
                   color:
                       isSelected ? Colors.blue.withOpacity(0.8) : Colors.black,
                   fontSize: 25,

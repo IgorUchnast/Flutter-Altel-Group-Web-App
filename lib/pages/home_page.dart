@@ -50,9 +50,6 @@ class _HomePageState extends State<HomePage> {
           height: screenSize.height * 0.4,
           color: Colors.white,
         ),
-        const Subtitle(
-          subtitle: "Nasi Klienci",
-        ),
       ],
     );
   }

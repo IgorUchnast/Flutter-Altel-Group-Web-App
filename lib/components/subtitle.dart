@@ -16,10 +16,10 @@ class Subtitle extends StatelessWidget {
           padding: const EdgeInsets.only(top: 50),
           child: Text(
             subtitle,
-            style: GoogleFonts.asar(
+            style: GoogleFonts.cinzel(
               color: Colors.black,
               fontSize: 30,
-              fontWeight: FontWeight.w900,
+              fontWeight: FontWeight.w700,
             ),
           ),
         ),
