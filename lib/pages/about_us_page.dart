@@ -50,7 +50,7 @@ class AboutUsPage extends StatelessWidget {
                 softWrap: true,
               ),
               Text(
-                "Firma ALTEL-GROUP Sp. z o.o. zatrudnia 25 osób. Pracownicy posiadają uprawnienia wydane przez Urząd Dozoru Technicznego kat I i II do prowadzenia prac konserwacyjno - remontowych przy urządzeniach dźwigowych, uprawnienia SEP w zakresie eksploatacji i dozoru oraz uprawnienia do prowadzenia pomiarów ochronnych przy instalacjach elektrycznych.\n",
+                "Pracownicy posiadają uprawnienia wydane przez Urząd Dozoru Technicznego kat I i II do prowadzenia prac konserwacyjno - remontowych przy urządzeniach dźwigowych, uprawnienia SEP w zakresie eksploatacji i dozoru oraz uprawnienia do prowadzenia pomiarów ochronnych przy instalacjach elektrycznych.\n",
                 style: GoogleFonts.asar(
                   color: const Color.fromARGB(255, 48, 48, 48),
                   fontSize: 20,

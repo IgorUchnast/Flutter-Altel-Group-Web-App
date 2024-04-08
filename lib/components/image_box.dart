@@ -1,80 +1,5 @@
-// import 'package:flutter/material.dart';
-// import 'dart:ui' as ui;
-
-// import 'package:google_fonts/google_fonts.dart';
-
-// class ImageContainerBox extends StatefulWidget {
-//   const ImageContainerBox({super.key});
-
-//   @override
-//   State<ImageContainerBox> createState() => _ImageContainerBoxState();
-// }
-
 // ignore_for_file: library_private_types_in_public_api
 
-// class _ImageContainerBoxState extends State<ImageContainerBox> {
-//   bool isSelected = false;
-//   @override
-//   Widget build(BuildContext context) {
-//     Size screenSize = MediaQuery.of(context).size;
-//     return MouseRegion(
-//       onEnter: (_) {
-//         setState(() {
-//           isSelected = true;
-//         });
-//       },
-//       onExit: (_) {
-//         setState(() {
-//           isSelected = false;
-//         });
-//       },
-//       child: Stack(
-//         alignment: Alignment.centerLeft,
-//         children: [
-//           Container(
-//             padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
-//             width: screenSize.width,
-//             height: 400,
-//             child: isSelected
-//                 ? ImageFiltered(
-//                     imageFilter: ui.ImageFilter.blur(
-//                       sigmaX: 1.5,
-//                       sigmaY: 1.5,
-//                     ),
-//                     child: Image.asset(
-//                       "images/elevatorbackground.jpg",
-//                       // "images/images/animated_image1.jpg",
-//                       fit: BoxFit.fitWidth,
-//                     ),
-//                   )
-//                 : Image.asset(
-//                     // "images/elevatorbackground.jpg",
-//                     // 'images/animated_image3.jpg',
-//                     'images/im3.jpg',
-//                     // 'images/animated_image2.png',
-//                     fit: BoxFit.fitWidth,
-//                     scale: 10,
-//                   ),
-//           ),
-//           Padding(
-//             padding: const EdgeInsets.all(70),
-//             child: Text(
-//               " Kompleksowa usługia i bezpieczny \n serwis wind od 1999 roku ",
-//               style: GoogleFonts.asar(
-//                 color: Colors.white,
-//                 fontSize: 40,
-//                 fontWeight: FontWeight.w900,
-//                 backgroundColor: Colors.black.withOpacity(0.5),
-//               ),
-//             ),
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
-
-// ****************************************************************************************
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -190,20 +115,8 @@ class _ImageContainerBoxState extends State<ImageContainerBox>
                         width: screenSize.width,
                         height: 400,
                       ),
-                // : Image.asset(
-                //     images[_currentIndex],
-                //     fit: BoxFit.fitWidth,
-                //     key: ValueKey<int>(_currentIndex),
-                //   ),
               ),
             ),
-            // child: Image.asset(
-            //   images[_currentIndex],
-            //   key: ValueKey<int>(_currentIndex),
-            //   fit: BoxFit.cover,
-            //   width: screenSize.width,
-            //   height: 400,
-            // ),
           ),
           // Text transition with fade effect
           AnimatedBuilder(
