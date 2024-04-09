@@ -7,11 +7,13 @@ class InformationContainer extends StatefulWidget {
     // required this.icon,
     required this.text,
     required this.text1,
+    // required this.iconText,
   });
 
   // final IconData icon;
   final String text;
   final String text1;
+  // final String iconText;
 
   @override
   State<InformationContainer> createState() => _InformationContainerState();
@@ -47,16 +49,18 @@ class _InformationContainerState extends State<InformationContainer> {
           width: 600,
           height: 300,
           decoration: BoxDecoration(
-            color: Colors.black.withOpacity(0.15),
+            color: Colors.black.withOpacity(0.05),
+            // color: Colors.black.withOpacity(0.15),
             border: Border.all(
-              color: Colors.white,
+              color: Colors.black.withOpacity(0.01),
+              // color: Colors.black.withOpacity(0.15),
               // color: isSelected ? Colors.blue : Colors.black,
               width: 2,
             ),
             boxShadow: [
               BoxShadow(
                 color: isSelected
-                    ? Colors.black.withOpacity(0.2)
+                    ? Colors.black.withOpacity(0.1)
                     : Colors.white.withOpacity(0),
                 spreadRadius: 5,
                 blurRadius: 7, // How much the shadow is blurred
@@ -87,6 +91,24 @@ class _InformationContainerState extends State<InformationContainer> {
                     color: const Color.fromARGB(255, 255, 222, 59),
                     height: 7,
                     width: 60,
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      top: 23,
+                      left: 170,
+                    ),
+                    child: Image.asset(
+                      widget.text1,
+                      color: isSelected
+                          ? Colors.orange.withOpacity(0.8)
+                          : Colors.black,
+                      scale: 0.5,
+                    ),
                   ),
                 ],
               ),

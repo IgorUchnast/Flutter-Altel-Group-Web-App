@@ -29,14 +29,16 @@ class _HomePageState extends State<HomePage> {
         ),
         const Wrap(
           children: [
-            InformationContainer(text: "SERWISY", text1: ""),
-            InformationContainer(text: "DŹWIGI", text1: ""),
+            InformationContainer(text: "SERWISY", text1: "images/gear.png"),
+            InformationContainer(text: "DŹWIGI", text1: "images/elevator.png"),
           ],
         ),
         const Wrap(
           children: [
-            InformationContainer(text: "AKTUALNOŚCI", text1: ""),
-            InformationContainer(text: "TECHNOLOGIA", text1: ""),
+            InformationContainer(
+                text: "AKTUALNOŚCI", text1: "images/handshake.png"),
+            InformationContainer(
+                text: "TECHNOLOGIA", text1: "images/technology.png"),
           ],
         ),
         const Subtitle(

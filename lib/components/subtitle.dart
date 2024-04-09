@@ -21,7 +21,7 @@ class Subtitle extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
-                    subtitle,
+                    subtitle.toUpperCase(),
                     style: AGfonts.subtitleFont,
                   ),
                 ],
@@ -33,15 +33,6 @@ class Subtitle extends StatelessWidget {
               ),
             ],
           ),
-        ),
-        // Divider(
-        //   color: const Color.fromARGB(255, 182, 182, 182),
-        //   endIndent: screenSize.width * 0.48,
-        //   indent: screenSize.width * 0.48,
-        //   thickness: 2,
-        // ),
-        const SizedBox(
-          height: 30,
         ),
       ],
     );

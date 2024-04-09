@@ -7,6 +7,11 @@ class AGfonts {
     fontSize: 45,
     fontWeight: FontWeight.w700,
   );
+  static final TextStyle subsubtitleFont = GoogleFonts.roboto(
+    color: Colors.black,
+    fontSize: 35,
+    fontWeight: FontWeight.w700,
+  );
   static final TextStyle tabBarFont = GoogleFonts.roboto(
     color: Colors.black,
     fontSize: 17.0,
@@ -20,10 +25,22 @@ class AGfonts {
     fontWeight: FontWeight.w500,
     decorationColor: Colors.orange,
   );
-  static final TextStyle textFont = GoogleFonts.roboto(
+  static final TextStyle navigatorFont = GoogleFonts.roboto(
     color: Colors.black,
-    fontSize: 22,
-    fontWeight: FontWeight.w900,
+    fontSize: 15.0,
+    fontWeight: FontWeight.w500,
+  );
+  static final TextStyle navigatorHover = GoogleFonts.roboto(
+    color: Colors.orange,
+    fontSize: 15.0,
+    // decoration: TextDecoration.underline,
+    decorationThickness: 3,
+    fontWeight: FontWeight.w500,
+    decorationColor: Colors.orange,
+  );
+  static final TextStyle textFont = GoogleFonts.roboto(
+    color: const Color.fromARGB(255, 48, 48, 48),
+    fontSize: 20,
   );
   static final TextStyle animatedImageFont = GoogleFonts.roboto(
     color: Colors.white,

@@ -15,42 +15,44 @@ class CustomPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
-    return Column(
-      // mainAxisAlignment: MainAxisAlignment.center,
-      mainAxisSize: MainAxisSize.max,
-      children: [
-        Stack(
-          alignment: Alignment.centerLeft,
-          children: [
-            Container(
-              padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
-              width: screenSize.width,
-              height: 350,
-              child: Image.asset(
-                imageText,
-                fit: BoxFit.cover,
+    return SingleChildScrollView(
+      child: Column(
+        // mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          Stack(
+            alignment: Alignment.centerLeft,
+            children: [
+              Container(
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 width: screenSize.width,
-                height: 400,
-              ),
-            ),
-            Positioned(
-              left: 70,
-              child: Text(
-                text,
-                style: GoogleFonts.asar(
-                  color: Colors.white,
-                  fontSize: 40,
-                  fontWeight: FontWeight.w900,
-                  backgroundColor: Colors.black.withOpacity(0.5),
+                height: 350,
+                child: Image.asset(
+                  imageText,
+                  fit: BoxFit.cover,
+                  width: screenSize.width,
+                  height: 400,
                 ),
               ),
-            ),
-          ],
-        ),
-        Subtitle(
-          subtitle: subtitle,
-        ),
-      ],
+              Positioned(
+                left: 70,
+                child: Text(
+                  text,
+                  style: GoogleFonts.asar(
+                    color: Colors.white,
+                    fontSize: 40,
+                    fontWeight: FontWeight.w900,
+                    backgroundColor: Colors.black.withOpacity(0.5),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Subtitle(
+            subtitle: subtitle,
+          ),
+        ],
+      ),
     );
   }
 }

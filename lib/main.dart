@@ -28,6 +28,9 @@ class MyApp extends StatelessWidget {
       // ),
       onGenerateRoute: (settings) => Routes.generateRoute(settings),
       initialRoute: "/",
+      // home: const StartingPageWeb(
+      //   page: HomePage(),
+      // ),
       home: LayoutBuilder(
         builder: (context, constraints) {
           if (constraints.maxWidth > 1100) {
