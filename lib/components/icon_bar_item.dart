@@ -37,8 +37,8 @@ class _IconBarItemState extends State<IconBarItem> {
           duration: const Duration(milliseconds: 200),
           child: Icon(
             widget.iconBarItem.icon,
-            color: isSelected ? Colors.blue : Colors.black,
-            size: isSelected ? 30 : 25,
+            color: isSelected ? Colors.orange : Colors.black,
+            size: isSelected ? 35 : 30,
           ),
         ),
       ),

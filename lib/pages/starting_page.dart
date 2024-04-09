@@ -25,8 +25,7 @@ class _StartingPageWebState extends State<StartingPageWeb> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         toolbarHeight: 100,
-        shadowColor: Colors.black.withOpacity(0.7),
-        // toolbarHeight: screenSize.height * 0.1,
+        shadowColor: Colors.black.withOpacity(0.5),
         backgroundColor: Colors.white,
         elevation: 100,
         iconTheme: const IconThemeData(
@@ -35,23 +34,27 @@ class _StartingPageWebState extends State<StartingPageWeb> {
         ),
         title: Padding(
           padding: EdgeInsets.only(
-            left: 0,
+            left: 100,
             right: screenSize.width * 0.01,
           ),
           child: const TopNaviagtionBar(
             barItem: [
-              "O Firmie",
-              "Dźwigi",
-              "Oferta",
-              "Bezpieczeństwo",
-              "Kariera",
-              "Kontakt",
+              "O FIRMIE",
+              "OFERTA",
+              "KARIERA",
+              "KONTAKT",
             ],
             barIcon: Icon(Icons.home),
           ),
         ),
+        bottom: PreferredSize(
+          preferredSize: const Size(10, 1),
+          child: Container(
+            color: Colors.black,
+            height: 4.0,
+          ),
+        ),
       ),
-      // endDrawer: const Drawer(),
       body: Center(
         child: SingleChildScrollView(
           child: widget.page,

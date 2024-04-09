@@ -44,7 +44,7 @@ class _BoxContainerState extends State<BoxContainer> {
           ),
           padding: const EdgeInsets.all(10),
           width: 300,
-          height: 300,
+          height: 00,
           decoration: BoxDecoration(
             color: Colors.white,
             border: Border.all(

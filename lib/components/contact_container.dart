@@ -9,7 +9,8 @@ class ContactContainer extends StatelessWidget {
     return Container(
       width: double.maxFinite,
       height: 300,
-      color: Colors.blue.withOpacity(0.1),
+      color: Colors.black.withOpacity(0.9),
+      // color: Colors.blue.withOpacity(0.1),
       child: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -50,12 +51,13 @@ class InfoCard extends StatelessWidget {
           Icon(
             contactIcon,
             size: 100,
-            color: Colors.blue,
+            color: Colors.amber,
           ),
           Text(
             infoText,
             style: GoogleFonts.asar(
-              color: const Color.fromARGB(255, 48, 48, 48),
+              // color: const Color.fromARGB(255, 48, 48, 48),
+              color: Colors.white,
               fontSize: 20,
             ),
           ),

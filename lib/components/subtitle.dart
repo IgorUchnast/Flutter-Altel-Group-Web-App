@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_web_app/constants/fonts.dart';
 
 class Subtitle extends StatelessWidget {
   const Subtitle({
@@ -13,22 +13,33 @@ class Subtitle extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.only(top: 50),
-          child: Text(
-            subtitle,
-            style: GoogleFonts.cinzel(
-              color: Colors.black,
-              fontSize: 30,
-              fontWeight: FontWeight.w700,
-            ),
+          padding: EdgeInsets.only(top: 50, left: screenSize.width * 0.2),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    subtitle,
+                    style: AGfonts.subtitleFont,
+                  ),
+                ],
+              ),
+              Container(
+                color: const Color.fromARGB(255, 255, 222, 59),
+                height: 7,
+                width: 60,
+              ),
+            ],
           ),
         ),
-        Divider(
-          color: const Color.fromARGB(255, 182, 182, 182),
-          endIndent: screenSize.width * 0.48,
-          indent: screenSize.width * 0.48,
-          thickness: 2,
-        ),
+        // Divider(
+        //   color: const Color.fromARGB(255, 182, 182, 182),
+        //   endIndent: screenSize.width * 0.48,
+        //   indent: screenSize.width * 0.48,
+        //   thickness: 2,
+        // ),
         const SizedBox(
           height: 30,
         ),

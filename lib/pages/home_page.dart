@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_app/components/box_information.dart';
 import 'package:flutter_web_app/components/contact_container.dart';
-import 'package:flutter_web_app/components/container_box.dart';
+// import 'package:flutter_web_app/components/container_box.dart';
 import 'package:flutter_web_app/components/image_animated.dart';
 import 'package:flutter_web_app/components/subtitle.dart';
 
@@ -16,31 +17,26 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       mainAxisSize: MainAxisSize.max,
       children: [
         const ImageAnimatedContainer(),
         const Subtitle(
           subtitle: "Nasze działania",
         ),
-        const Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+        const SizedBox(
+          height: 40,
+        ),
+        const Wrap(
           children: [
-            BoxContainer(
-              text: "Serwisy",
-              text1: "images/elevator.png",
-            ),
-            BoxContainer(
-              text: "Dźwigi",
-              text1: "images/gear.png",
-            ),
-            BoxContainer(
-              text: "Technologia",
-              text1: "images/technology.png",
-            ),
-            BoxContainer(
-              text: "Cele",
-              text1: "images/plans.png",
-            ),
+            InformationContainer(text: "SERWISY", text1: ""),
+            InformationContainer(text: "DŹWIGI", text1: ""),
+          ],
+        ),
+        const Wrap(
+          children: [
+            InformationContainer(text: "AKTUALNOŚCI", text1: ""),
+            InformationContainer(text: "TECHNOLOGIA", text1: ""),
           ],
         ),
         const Subtitle(

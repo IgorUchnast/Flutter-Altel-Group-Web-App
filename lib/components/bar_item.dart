@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_web_app/constants/fonts.dart';
+// import 'package:google_fonts/google_fonts.dart';
 
 class TopNavigationBarItem extends StatefulWidget {
   const TopNavigationBarItem({
@@ -31,30 +32,26 @@ class _TopNavigationBarItemState extends State<TopNavigationBarItem> {
           });
         },
         onExit: (_) {
-          setState(() {
-            isSelected = false;
-          });
+          setState(
+            () {
+              isSelected = false;
+            },
+          );
         },
         child: AnimatedDefaultTextStyle(
           duration: const Duration(milliseconds: 100),
-          style: isSelected
-              ? GoogleFonts.cinzel(
-                  color: Colors.black,
-                  fontSize: 20.0,
-                  decoration: TextDecoration.underline,
-                  decorationThickness: 1,
-                  fontWeight: FontWeight.w500,
-                  decorationColor: Colors.black,
-                )
-              : GoogleFonts.cinzel(
-                  color: Colors.black,
-                  fontSize: 17.0,
-                  fontWeight: FontWeight.w500,
-                ),
+          // style: AGfonts.tabBarFont,
+          style: isSelected ? AGfonts.tabBarFontHover : AGfonts.tabBarFont,
           child: Container(
-            margin: const EdgeInsets.all(15),
+            margin: const EdgeInsets.only(
+              left: 25,
+              right: 25,
+              bottom: 15,
+              top: 15,
+            ),
             child: Text(
               widget.title,
+              // style: AGfonts.tabBarFont,
             ),
           ),
         ),

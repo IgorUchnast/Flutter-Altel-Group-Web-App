@@ -1,8 +1,8 @@
-// ignore_for_file: library_private_types_in_public_api
+// ignore_for_file: library_private_types_in_public_api, sized_box_for_whitespace
 
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_web_app/constants/fonts.dart';
 import 'dart:ui' as ui;
 
 class ImageAnimatedContainer extends StatefulWidget {
@@ -17,20 +17,23 @@ class _ImageAnimatedContainerState extends State<ImageAnimatedContainer>
   bool isSelected = false;
   int _currentIndex = 0;
   final List<String> images = [
-    "images/elevatorbackground.jpg",
-    "images/im5.png",
-    "images/1000s.jpg",
-    "images/Services.jpeg",
+    // "images/new1.jpg",
     "images/slider.jpg",
-    "images/im4.jpeg",
+    "images/mapa.png",
+    "images/new2.jpg",
+    "images/1000s.jpg",
+    // "images/im5.png",
+    // "images/elevatorbackground.jpg",
+    // "images/Services.jpeg",
+    // "images/im4.jpeg",
   ];
   final List<String> texts = [
-    " Kompleksowa obsługa i bezpieczny \n serwis wind od 1999 roku ",
-    " Innowacyjne rozwiązania \n dla przemysłu ",
-    " Bezpieczne i sprawdzone \n serwisy wind dla naszych klientów ",
-    " Zapewniamy bezpieczeństwo na każdym piętrze \n dzięki naszemu doświadczeniu w serwisie \n wind od ponad dwóch dekad ",
-    " Nasze usługi\n cieszą się uznaniem klientów, \n którzy doceniają nasze zaangażowanie i niezawodność ",
-    " Tworzymy niestandardowe projekty wind, \n łącząc innowacyjność z indywidualnymi potrzebami klientów. ",
+    " Kompleksowa obsługa i bezpieczny\t\t \n serwis wind od 1999 roku ",
+    " Innowacyjne rozwiązania\t \n dla przemysłu\t ",
+    " Bezpieczne i sprawdzone\t \n serwisy wind dla naszych klientów ",
+    " Zapewniamy bezpieczeństwo na każdym piętrze\t \n dzięki naszemu doświadczeniu w serwisie \n wind od ponad dwóch dekad ",
+    // " Nasze usługi\n cieszą się uznaniem klientów,\t \n którzy doceniają nasze zaangażowanie i niezawodność ",
+    // " Tworzymy niestandardowe projekty wind,\t \n łącząc innowacyjność z indywidualnymi potrzebami klientów. ",
   ];
 
   late final AnimationController _controller;
@@ -66,7 +69,7 @@ class _ImageAnimatedContainerState extends State<ImageAnimatedContainer>
     Size screenSize = MediaQuery.of(context).size;
     return SizedBox(
       width: screenSize.width,
-      height: 350,
+      height: screenSize.width * 0.18,
       child: AnimatedSwitcher(
         duration: const Duration(seconds: 1),
         child: Stack(
@@ -77,31 +80,54 @@ class _ImageAnimatedContainerState extends State<ImageAnimatedContainer>
               onEnter: (_) => setState(() => isSelected = true),
               onExit: (_) => setState(() => isSelected = false),
               child: Container(
-                padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 width: screenSize.width,
                 height: 500,
                 child: isSelected
                     ? ImageFiltered(
                         imageFilter:
                             ui.ImageFilter.blur(sigmaX: 1.5, sigmaY: 1.5),
-                        child: Image.asset(images[_currentIndex],
-                            fit: BoxFit.fitWidth),
+                        child: Image.asset(
+                          images[_currentIndex],
+                          fit: BoxFit.fitWidth,
+                        ),
                       )
-                    : Image.asset(images[_currentIndex],
+                    : Image.asset(
+                        images[_currentIndex],
                         fit: BoxFit.cover,
                         width: screenSize.width,
-                        height: 400),
+                        height: 400,
+                      ),
               ),
             ),
             Positioned(
               left: 70,
-              child: Text(
-                texts[_currentIndex],
-                style: GoogleFonts.asar(
-                  color: Colors.white,
-                  fontSize: 40,
-                  fontWeight: FontWeight.w900,
-                  backgroundColor: Colors.black.withOpacity(0.5),
+              child: Container(
+                height: 150,
+                width: double.maxFinite,
+                // color: Colors.black.withOpacity(1),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          texts[_currentIndex],
+                          style: AGfonts.animatedImageFont,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Container(
+                          color: const Color.fromARGB(255, 255, 222, 59),
+                          height: 7,
+                          width: 60,
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ),
             ),

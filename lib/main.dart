@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       home: LayoutBuilder(
         builder: (context, constraints) {
-          if (constraints.maxWidth > 1200) {
+          if (constraints.maxWidth > 1100) {
             return const StartingPageWeb(
               page: HomePage(),
             );

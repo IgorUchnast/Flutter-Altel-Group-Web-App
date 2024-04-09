@@ -21,53 +21,47 @@ class _TopNaviagtionBarState extends State<TopNaviagtionBar> {
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
     return Container(
-      width: double.infinity,
+      width: screenSize.width,
       color: Colors.white,
-      padding: EdgeInsets.fromLTRB(
-        screenSize.width * 0.05,
-        100,
-        70,
-        screenSize.width * 0.05,
-      ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           const AltelContainer(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const IconBarItem(
-                routeName: "/",
-                iconBarItem: Icon(Icons.home),
-              ),
-              const SizedBox(
-                width: 5,
-              ),
-              TopNavigationBarItem(
-                title: widget.barItem[0],
-                routeName: "/o-firmie",
-              ),
-              TopNavigationBarItem(
-                title: widget.barItem[1],
-                routeName: "/dźwigi",
-              ),
-              TopNavigationBarItem(
-                title: widget.barItem[2],
-                routeName: "/oferta",
-              ),
-              TopNavigationBarItem(
-                title: widget.barItem[3],
-                routeName: "/bezpieczeństwo",
-              ),
-              TopNavigationBarItem(
-                title: widget.barItem[4],
-                routeName: "/kariera",
-              ),
-              TopNavigationBarItem(
-                title: widget.barItem[5],
-                routeName: "/kontakt",
-              ),
-            ],
+          SizedBox(
+            width: screenSize.width * 0.15,
+          ),
+          Container(
+            width: 600,
+            height: 90,
+            color: Colors.white,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const IconBarItem(
+                  routeName: "/",
+                  iconBarItem: Icon(Icons.home),
+                ),
+                const SizedBox(
+                  width: 5,
+                ),
+                TopNavigationBarItem(
+                  title: widget.barItem[0],
+                  routeName: "/o-firmie",
+                ),
+                TopNavigationBarItem(
+                  title: widget.barItem[1],
+                  routeName: "/oferta",
+                ),
+                TopNavigationBarItem(
+                  title: widget.barItem[2],
+                  routeName: "/kariera",
+                ),
+                TopNavigationBarItem(
+                  title: widget.barItem[3],
+                  routeName: "/kontakt",
+                ),
+              ],
+            ),
           ),
         ],
       ),
