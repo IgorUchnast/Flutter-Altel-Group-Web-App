@@ -49,7 +49,7 @@ class Routes {
       case '/kariera':
         return MaterialPageRoute(
           builder: (_) => const StartingPageWeb(
-            page: CarierPage(),
+            page: CarrierPage(),
           ),
           settings: settings,
         );
@@ -62,14 +62,20 @@ class Routes {
         );
       default:
         return MaterialPageRoute(
-          builder: (_) {
-            return const Center(
-              child: Text(
-                "Error Page",
-              ),
-            );
-          },
+          builder: (_) => const StartingPageWeb(
+            page: HomePage(),
+          ),
+          settings: settings,
         );
+      // return MaterialPageRoute(
+      //   builder: (_) {
+      //     return const Center(
+      //       child: Text(
+      //         "Error Page",
+      //       ),
+      //     );
+      //   },
+      // );
     }
   }
 }

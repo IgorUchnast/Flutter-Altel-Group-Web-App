@@ -19,7 +19,7 @@ class _ImageAnimatedContainerState extends State<ImageAnimatedContainer>
   final List<String> images = [
     // "images/new1.jpg",
     "images/slider.jpg",
-    "images/mapa.png",
+    // "images/mapa.png",
     "images/new2.jpg",
     "images/1000s.jpg",
     // "images/im5.png",
@@ -30,7 +30,7 @@ class _ImageAnimatedContainerState extends State<ImageAnimatedContainer>
   final List<String> texts = [
     " Kompleksowa obsługa i bezpieczny\t\t \n serwis wind od 1999 roku ",
     " Innowacyjne rozwiązania\t \n dla przemysłu\t ",
-    " Bezpieczne i sprawdzone\t \n serwisy wind dla naszych klientów ",
+    // " Bezpieczne i sprawdzone\t \n serwisy wind dla naszych klientów ",
     " Zapewniamy bezpieczeństwo na każdym piętrze\t \n dzięki naszemu doświadczeniu w serwisie \n wind od ponad dwóch dekad ",
     // " Nasze usługi\n cieszą się uznaniem klientów,\t \n którzy doceniają nasze zaangażowanie i niezawodność ",
     // " Tworzymy niestandardowe projekty wind,\t \n łącząc innowacyjność z indywidualnymi potrzebami klientów. ",

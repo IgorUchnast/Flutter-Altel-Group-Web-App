@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AGfonts {
+  const AGfonts({
+    required this.txtFont,
+  });
+  final double txtFont;
   static final TextStyle subtitleFont = GoogleFonts.roboto(
     color: Colors.black,
     fontSize: 45,
@@ -10,6 +14,11 @@ class AGfonts {
   static final TextStyle subsubtitleFont = GoogleFonts.roboto(
     color: Colors.black,
     fontSize: 35,
+    fontWeight: FontWeight.w700,
+  );
+  static final TextStyle subsubtitleFontMin = GoogleFonts.roboto(
+    color: Colors.black,
+    fontSize: 20,
     fontWeight: FontWeight.w700,
   );
   static final TextStyle tabBarFont = GoogleFonts.roboto(
@@ -41,6 +50,11 @@ class AGfonts {
   static final TextStyle textFont = GoogleFonts.roboto(
     color: const Color.fromARGB(255, 48, 48, 48),
     fontSize: 20,
+  );
+  static final TextStyle mainTextFont = GoogleFonts.roboto(
+    color: const Color.fromARGB(255, 48, 48, 48),
+    fontSize: 20,
+    fontWeight: FontWeight.w600,
   );
   static final TextStyle animatedImageFont = GoogleFonts.roboto(
     color: Colors.white,
