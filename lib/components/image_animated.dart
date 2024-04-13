@@ -69,7 +69,7 @@ class _ImageAnimatedContainerState extends State<ImageAnimatedContainer>
     Size screenSize = MediaQuery.of(context).size;
     return SizedBox(
       width: screenSize.width,
-      height: screenSize.width * 0.18,
+      height: screenSize.width * 0.25,
       child: AnimatedSwitcher(
         duration: const Duration(seconds: 1),
         child: Stack(
@@ -82,7 +82,7 @@ class _ImageAnimatedContainerState extends State<ImageAnimatedContainer>
               child: Container(
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 width: screenSize.width,
-                height: 500,
+                height: screenSize.width * 0.25,
                 child: isSelected
                     ? ImageFiltered(
                         imageFilter:
@@ -98,6 +98,20 @@ class _ImageAnimatedContainerState extends State<ImageAnimatedContainer>
                         width: screenSize.width,
                         height: 400,
                       ),
+              ),
+            ),
+            Container(
+              height: screenSize.width * 0.25,
+              width: screenSize.width,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  colors: [
+                    Colors.black,
+                    Colors.black.withOpacity(0.1),
+                  ],
+                ),
               ),
             ),
             Positioned(
