@@ -29,7 +29,7 @@ class AGfonts {
   static final TextStyle tabBarFontHover = GoogleFonts.roboto(
     color: Colors.orange,
     fontSize: 20.0,
-    decoration: TextDecoration.underline,
+    // decoration: TextDecoration.underline,
     decorationThickness: 3,
     fontWeight: FontWeight.w500,
     decorationColor: Colors.orange,

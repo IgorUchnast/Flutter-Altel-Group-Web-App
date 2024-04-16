@@ -6,8 +6,11 @@ import 'package:flutter_web_app/components/txt_container.dart';
 import 'package:flutter_web_app/constants/txt_files/o_firmie_txt.dart';
 
 class AboutUsPage extends StatefulWidget {
-  const AboutUsPage({super.key});
-
+  const AboutUsPage({
+    super.key,
+    // required this.pageElementKey,
+  });
+  // final GlobalKey pageElementKey;
   @override
   State<AboutUsPage> createState() => _AboutUsPageState();
 }
@@ -21,6 +24,7 @@ class _AboutUsPageState extends State<AboutUsPage> {
   final GlobalKey _uprawnieniaKey = GlobalKey();
   final GlobalKey _kadraKey = GlobalKey();
   final GlobalKey _zapleczeTechniczneKey = GlobalKey();
+  final GlobalKey _mainPage = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
@@ -36,15 +40,13 @@ class _AboutUsPageState extends State<AboutUsPage> {
           ),
           const CustomPage(
             subtitle: "O Firmie",
-            imageText: "images/new2.jpg",
-            text:
-                "\t Kompleksowa obsługa i bezpieczny \n serwis wind od 1999 roku",
           ),
           const SizedBox(
             height: 20,
           ),
           const Divider(),
           Row(
+            key: _mainPage,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               NavigatingPageButton(

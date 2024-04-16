@@ -13,9 +13,6 @@ class ContactPage extends StatelessWidget {
       children: [
         const CustomPage(
           subtitle: "Kontakt",
-          imageText: "images/firm.png",
-          text:
-              "\tNasze usługi\n cieszą się uznaniem klientów, \n którzy doceniają nasze zaangażowanie i niezawodność",
         ),
         Container(
           height: 400,

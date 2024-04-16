@@ -5,11 +5,11 @@ import 'package:flutter_web_app/pages/contact_page.dart';
 import 'package:flutter_web_app/pages/cranes_page.dart';
 import 'package:flutter_web_app/pages/home_page.dart';
 import 'package:flutter_web_app/pages/offer_page.dart';
-import 'package:flutter_web_app/pages/security_page.dart';
 import 'package:flutter_web_app/pages/starting_page.dart';
 
 class Routes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
+    // GlobalKey targetKey = settings.arguments as GlobalKey;
     switch (settings.name) {
       case '/':
         return MaterialPageRoute(
@@ -36,13 +36,6 @@ class Routes {
         return MaterialPageRoute(
           builder: (_) => const StartingPageWeb(
             page: OfferPage(),
-          ),
-          settings: settings,
-        );
-      case '/bezpieczeństwo':
-        return MaterialPageRoute(
-          builder: (_) => const StartingPageWeb(
-            page: SecurityPage(),
           ),
           settings: settings,
         );

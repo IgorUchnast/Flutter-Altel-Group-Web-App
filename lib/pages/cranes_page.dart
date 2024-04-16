@@ -13,8 +13,6 @@ class CranesPage extends StatelessWidget {
       children: [
         const CustomPage(
           subtitle: "Dźwigi",
-          imageText: "images/1000s.jpg",
-          text: "\tOferujmey szeroki zakres produkcji dźwigów",
         ),
         Container(
           height: 400,

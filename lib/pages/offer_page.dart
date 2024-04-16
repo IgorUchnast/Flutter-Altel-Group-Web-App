@@ -35,8 +35,6 @@ class _OfferPageState extends State<OfferPage> {
           ),
           const CustomPage(
             subtitle: "Oferta",
-            imageText: "images/offerimage.jpg",
-            text: "\tInnowacyjne rozwiązania \n dla przemysłu ",
           ),
           // const Divider(),
           const SizedBox(

@@ -1,8 +1,8 @@
 // ignore_for_file: sized_box_for_whitespace
 import 'package:flutter/material.dart';
-import 'package:flutter_web_app/components/altel_container.dart';
-import 'package:flutter_web_app/components/icon_bar_item.dart';
-import 'package:flutter_web_app/components/bar_item.dart';
+import 'package:flutter_web_app/components/appbar_widgets/altel_container.dart';
+import 'package:flutter_web_app/components/appbar_widgets/icon_bar_item.dart';
+import 'package:flutter_web_app/components/appbar_widgets/bar_item.dart';
 
 class TopNaviagtionBar extends StatefulWidget {
   const TopNaviagtionBar({

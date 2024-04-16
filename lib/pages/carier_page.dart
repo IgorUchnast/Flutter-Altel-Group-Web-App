@@ -32,8 +32,6 @@ class _CarrierPageState extends State<CarrierPage> {
           // ),
           const CustomPage(
             subtitle: "Kariera",
-            imageText: "images/new2.jpg",
-            text: "\tInnowacyjne rozwiązania \n dla przemysłu ",
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(0, 30, 0, 10),
